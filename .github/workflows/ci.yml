@@ -1,0 +1,48 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  synthetic-pipeline:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - name: Install CPU-only test dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install numpy==2.2.6 "Pillow>=10,<12" "PyYAML>=6,<7" "pytest>=8,<9" "ruff>=0.9,<1"
+          python -m pip install --no-deps -e .
+      - name: Compile and test
+        run: |
+          python -m compileall -q src tests
+          ruff check src tests
+          pytest -q -m "not integration"
+          ksdd2-train --config configs/r4_seed42.yaml --dry-run
+
+  ultralytics-integration:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: pip
+      - name: Install CPU PyTorch and project
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install -e ".[dev]"
+      - name: Test Ultralytics path resolution and one-epoch training
+        run: pytest -q -m integration

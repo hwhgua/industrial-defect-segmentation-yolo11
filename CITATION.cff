@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this research pipeline, please cite this repository and the original KolektorSDD2 work."
+title: "Industrial Defect Segmentation with YOLO11"
+type: software
+authors:
+  - family-names: "黃"
+    given-names: "煒驊"
+version: 0.1.0
+date-released: 2026-10-01
+license: AGPL-3.0-only

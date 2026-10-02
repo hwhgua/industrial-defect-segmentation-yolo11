@@ -1,0 +1,66 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+.venv/
+venv/
+
+# Editors and operating systems
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Ultralytics local state
+.ultralytics/
+Ultralytics/
+ultralytics/
+
+# Raw/converted data and generated outputs
+data/
+KolektorSDD2/
+KolektorSDD2.zip
+kolektorsdd2.zip
+datasets/*
+!datasets/.gitkeep
+runs/*
+!runs/.gitkeep
+reports/*
+!reports/metrics/
+!reports/figures/
+reports/metrics/*
+!reports/metrics/.gitkeep
+reports/figures/*
+!reports/figures/.gitkeep
+
+# Model files and caches
+*.pt
+*.pth
+*.onnx
+*.engine
+*.cache
+*.ptl
+*.ckpt
+*.safetensors
+*.tflite
+*.coreml
+*.mlmodel
+*.mlpackage/
+
+# Generated experiment and tracking state
+wandb/
+mlruns/
+lightning_logs/
+tensorboard/
+
+# Local environment files
+.env
+.env.*
+!.env.example
+*.log

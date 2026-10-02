@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="430" viewBox="0 0 900 430" role="img" aria-labelledby="title description">
+  <title id="title">Normal-image false-alarm rate</title>
+  <desc id="description">The validation set had a 0.96 percent false-alarm rate, below the approximately 1.20 percent target. The frozen operating point had a 2.24 percent false-alarm rate on the official test split.</desc>
+  <rect width="900" height="430" fill="#ffffff"/>
+  <text x="64" y="52" fill="#172033" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="700">Normal-image false-alarm rate</text>
+  <text x="64" y="81" fill="#536176" font-family="Segoe UI, Arial, sans-serif" font-size="15">Frozen operating point · confidence 0.0975 · NMS IoU 0.3</text>
+  <line x1="270" y1="112" x2="270" y2="337" stroke="#9aa7b8" stroke-width="1.5"/>
+  <line x1="270" y1="337" x2="780" y2="337" stroke="#9aa7b8" stroke-width="1.5"/>
+  <g fill="#65748a" font-family="Segoe UI, Arial, sans-serif" font-size="13" text-anchor="middle">
+    <text x="270" y="360">0%</text><text x="474" y="360">1%</text><text x="678" y="360">2%</text>
+  </g>
+  <g stroke="#e2e8f0" stroke-width="1">
+    <line x1="474" y1="112" x2="474" y2="337"/><line x1="678" y1="112" x2="678" y2="337"/>
+  </g>
+  <g fill="#253247" font-family="Segoe UI, Arial, sans-serif" font-size="16">
+    <text x="64" y="169">Validation target</text><text x="64" y="239">Validation result</text><text x="64" y="309">Official test result</text>
+  </g>
+  <line x1="515" y1="106" x2="515" y2="337" stroke="#d97706" stroke-width="2" stroke-dasharray="6 5"/>
+  <rect x="270" y="144" width="245" height="34" rx="5" fill="#f4b942"/>
+  <rect x="270" y="214" width="196" height="34" rx="5" fill="#37a889"/>
+  <rect x="270" y="284" width="457" height="34" rx="5" fill="#d95d5d"/>
+  <g fill="#253247" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="600">
+    <text x="526" y="167">≈1.20% (5 / 417)</text><text x="477" y="237">0.96% (4 / 417)</text><text x="738" y="307">2.24% (20 / 894)</text>
+  </g>
+  <text x="64" y="402" fill="#536176" font-family="Segoe UI, Arial, sans-serif" font-size="13">The official test split was inspected during earlier exploratory work; this is a reference experiment result, not an unseen-data estimate.</text>
+</svg>

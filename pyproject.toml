@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ksdd2-yolo11-seg"
+version = "0.1.0"
+description = "Reproducible YOLO11n-seg pipeline for KolektorSDD2 industrial defect segmentation"
+readme = "README.md"
+requires-python = ">=3.10,<3.13"
+license = { text = "AGPL-3.0-only" }
+authors = [{ name = "黃煒驊" }]
+dependencies = [
+  "numpy==2.2.6",
+  "Pillow>=10.0,<12.0",
+  "PyYAML>=6.0,<7.0",
+  "ultralytics==8.3.221",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0,<9.0",
+  "ruff>=0.9,<1.0",
+]
+
+[project.scripts]
+ksdd2-prepare = "ksdd2_seg.splitting:main"
+ksdd2-verify = "ksdd2_seg.verification:main"
+ksdd2-train = "ksdd2_seg.training:main"
+ksdd2-evaluate = "ksdd2_seg.evaluate:main"
+ksdd2-select = "ksdd2_seg.select_operating_point:main"
+ksdd2-analyze = "ksdd2_seg.analyze:main"
+ksdd2-predict = "ksdd2_seg.predict:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
+pythonpath = ["src"]
+markers = ["integration: requires the full Ultralytics/PyTorch runtime"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

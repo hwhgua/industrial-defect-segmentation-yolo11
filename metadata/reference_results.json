@@ -1,0 +1,33 @@
+{
+  "status": "reference record from completed local experiment",
+  "model": "YOLO11n-seg R4 seed42",
+  "software": {
+    "python": "3.10.19",
+    "torch": "2.11.0+cu128",
+    "ultralytics": "8.3.221",
+    "numpy": "2.2.6"
+  },
+  "official_test_map": {
+    "box_precision": 0.631,
+    "box_recall": 0.529,
+    "box_map50": 0.600,
+    "box_map50_95": 0.275,
+    "mask_precision": 0.707,
+    "mask_recall": 0.547,
+    "mask_map50": 0.642,
+    "mask_map50_95": 0.285
+  },
+  "frozen_operating_point": {
+    "confidence": 0.0975,
+    "nms_iou": 0.3,
+    "match_iou": 0.5,
+    "localized_positive_images": 75,
+    "positive_images": 110,
+    "normal_false_alarm_images": 20,
+    "normal_images": 894,
+    "normal_image_false_alarm_rate": 0.0224,
+    "target_normal_image_false_alarm_rate": 0.0120,
+    "target_met": false
+  },
+  "caveat": "The official test split was inspected during earlier exploratory work and is not treated as a fully unbiased final generalization estimate."
+}

@@ -1,0 +1,45 @@
+protocol,split,metric,value,unit,notes
+dataset_split,train,images,1865,count,
+dataset_split,train,defect_images,197,count,
+dataset_split,train,normal_images,1668,count,
+dataset_split,train,segmentation_instances,221,count,
+dataset_split,validation,images,466,count,
+dataset_split,validation,defect_images,49,count,
+dataset_split,validation,normal_images,417,count,
+dataset_split,validation,segmentation_instances,51,count,
+dataset_split,official_test,images,1004,count,
+dataset_split,official_test,defect_images,110,count,
+dataset_split,official_test,normal_images,894,count,
+dataset_split,official_test,segmentation_instances,119,count,
+official_ultralytics_map,validation,box_mAP50,0.595,ratio,Confidence 0.001; prediction NMS IoU 0.7; max_det 300
+official_ultralytics_map,validation,box_mAP50_95,0.258,ratio,Confidence 0.001; prediction NMS IoU 0.7; max_det 300
+official_ultralytics_map,validation,mask_mAP50,0.563,ratio,Confidence 0.001; prediction NMS IoU 0.7; max_det 300
+official_ultralytics_map,validation,mask_mAP50_95,0.252,ratio,Confidence 0.001; prediction NMS IoU 0.7; max_det 300
+official_ultralytics_map,official_test,box_precision,0.631,ratio,Confidence 0.001; prediction NMS IoU 0.7; max_det 300
+official_ultralytics_map,official_test,box_recall,0.529,ratio,Confidence 0.001; prediction NMS IoU 0.7; max_det 300
+official_ultralytics_map,official_test,box_mAP50,0.600,ratio,Confidence 0.001; prediction NMS IoU 0.7; max_det 300
+official_ultralytics_map,official_test,box_mAP50_95,0.275,ratio,Confidence 0.001; prediction NMS IoU 0.7; max_det 300
+official_ultralytics_map,official_test,mask_precision,0.707,ratio,Confidence 0.001; prediction NMS IoU 0.7; max_det 300
+official_ultralytics_map,official_test,mask_recall,0.547,ratio,Confidence 0.001; prediction NMS IoU 0.7; max_det 300
+official_ultralytics_map,official_test,mask_mAP50,0.642,ratio,Confidence 0.001; prediction NMS IoU 0.7; max_det 300
+official_ultralytics_map,official_test,mask_mAP50_95,0.285,ratio,Confidence 0.001; prediction NMS IoU 0.7; max_det 300
+frozen_operating_point,validation,box_precision,0.610,ratio,Confidence 0.0975; prediction NMS IoU 0.3; match IoU 0.5
+frozen_operating_point,validation,box_recall,0.706,ratio,Confidence 0.0975; prediction NMS IoU 0.3; match IoU 0.5
+frozen_operating_point,validation,box_f1,0.655,ratio,Confidence 0.0975; prediction NMS IoU 0.3; match IoU 0.5
+frozen_operating_point,validation,mask_precision,0.525,ratio,Confidence 0.0975; prediction NMS IoU 0.3; match IoU 0.5
+frozen_operating_point,validation,mask_recall,0.608,ratio,Confidence 0.0975; prediction NMS IoU 0.3; match IoU 0.5
+frozen_operating_point,validation,mask_f1,0.564,ratio,Confidence 0.0975; prediction NMS IoU 0.3; match IoU 0.5
+frozen_operating_point,validation,image_localization_recall,0.714,ratio,Confidence 0.0975; prediction NMS IoU 0.3; match IoU 0.5
+frozen_operating_point,validation,normal_image_false_alarm_rate,0.0096,ratio,4 of 417 normal images
+frozen_operating_point,official_test,box_precision,0.534,ratio,Confidence 0.0975; prediction NMS IoU 0.3; match IoU 0.5
+frozen_operating_point,official_test,box_recall,0.664,ratio,Confidence 0.0975; prediction NMS IoU 0.3; match IoU 0.5
+frozen_operating_point,official_test,box_f1,0.592,ratio,Confidence 0.0975; prediction NMS IoU 0.3; match IoU 0.5
+frozen_operating_point,official_test,mask_precision,0.534,ratio,Confidence 0.0975; prediction NMS IoU 0.3; match IoU 0.5
+frozen_operating_point,official_test,mask_recall,0.664,ratio,Confidence 0.0975; prediction NMS IoU 0.3; match IoU 0.5
+frozen_operating_point,official_test,mask_f1,0.592,ratio,Confidence 0.0975; prediction NMS IoU 0.3; match IoU 0.5
+frozen_operating_point,official_test,image_localization_recall,0.682,ratio,75 of 110 positive images localized
+frozen_operating_point,official_test,box_false_negatives,40,count,Out of 119 ground-truth instances
+frozen_operating_point,official_test,box_false_positives,69,count,
+frozen_operating_point,official_test,normal_image_false_alarm_rate,0.0224,ratio,20 of 894 normal images
+frozen_operating_point,official_test,matched_mask_iou,0.676,ratio,Matched box pairs only
+frozen_operating_point,official_test,matched_dice,0.796,ratio,Matched box pairs only
